@@ -4,7 +4,7 @@
         <div class="content">
             <b-container class="clearfix">
                 <b-row>
-                    <b-col class="mx-auto">
+                    <b-col class="ms-5">
                         <div class="block-headings">
                             <!-- <h3>Hi, This is</h3> -->
                             <h1>Mohit Sharma</h1>
@@ -13,13 +13,14 @@
 
                         <div class="block-intro">
                             <p>
-                                Based in India I have more than 5 years of experience.
+                                My stack includes PHP & Laravel, Vue.js, MySQL and all the other various 
                                 <br>
-                                My stack includes PHP & Laravel, Vue.js, MySQL and all the other various frameworks, 
-                                <br>
-                                libraries and technologies related to them. 
-                                Currently I am available for hire.
+                                frameworks, libraries and technologies related to them.
                             </p>
+                        </div>
+
+                        <div class="block-links">
+                            <router-link to="/about">More about me</router-link>
                         </div>
 
                         <div class="block-social">
@@ -51,7 +52,7 @@
     </section>
 </template>
 
-<style scoped>
+<style>
     @import "../../css/app.css";
-    @import "../../css/home.css";
 </style>
+<style scoped src="../../css/home.css"></style>
