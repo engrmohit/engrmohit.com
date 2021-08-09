@@ -15,7 +15,10 @@
 
                         <p class="c-text-justify">
                             My current stack includes PHP &amp; Laravel, Vue.js, MySQL and all the other various frameworks, 
-                            libraries and technologies related to them. Currently I am <span class="c-f-w-600">available for hire.</span>
+                            libraries and technologies related to them. Currently I am 
+                            <span class="c-f-w-600">
+                                <u><router-link to="/contact">available for hire</router-link></u>
+                            </span>.
                         </p>
                     </div>
                     <div class="col-lg-4 mx-auto">

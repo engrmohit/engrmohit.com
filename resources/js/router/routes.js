@@ -13,5 +13,10 @@ export default [
     name: 'about',
     path: '/about',
     component: () => import('../views/About.vue')
+  },
+  {
+    name: 'contact',
+    path: '/contact',
+    component: () => import('../views/contact.vue')
   }
 ]
