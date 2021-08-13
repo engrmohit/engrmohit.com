@@ -18,5 +18,10 @@ export default [
     name: 'contact',
     path: '/contact',
     component: () => import('../views/contact.vue')
+  },
+  {
+    name: 'portfolio',
+    path: '/portfolio',
+    component: () => import('../views/Projects.vue')
   }
 ]
