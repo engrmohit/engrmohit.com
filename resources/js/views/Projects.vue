@@ -49,16 +49,20 @@
                                                             Callsheet works in two languages (English and Danish). More languages are coming soon.
                                                         </p>
                                                     </div>
-                                                    <p class="my-4">
-                                                        <a href="javascript:void(0)" class="btn btn-primary btn-more-details text-decoration-none">
+
+                                                    <div class="my-4">
+                                                        <router-link to="/portfolio/show" class="btn btn-primary btn-more-details">
                                                             More details
-                                                        </a>
-                                                    </p>
-                                                    <p class="pt-3 tech-tags">
-                                                        <span class="title">Technologies</span>
+                                                        </router-link>
+                                                    </div>
+
+                                                    <div class="pt-3">
+                                                        <span class="technologies-title">
+                                                            Technologies
+                                                        </span>
                                                         <span class="tag">Laravel</span>
                                                         <span class="tag">Vuejs</span>
-                                                    </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <!-- Project image -->
@@ -104,16 +108,20 @@
                                                             Both the actors and the casters can message to each others to discuss any job. Actors are provided with an applied jobs section where they can see all the job they had applied for.
                                                         </p>
                                                     </div>
-                                                    <p class="my-4">
-                                                        <a href="javascript:void(0)" class="btn btn-primary btn-more-details text-decoration-none">
+
+                                                    <div class="my-4">
+                                                        <router-link to="/portfolio/show" class="btn btn-primary btn-more-details">
                                                             More details
-                                                        </a>
-                                                    </p>
-                                                    <p class="pt-3 tech-tags">
-                                                        <span class="title">Technologies</span>
+                                                        </router-link>
+                                                    </div>
+
+                                                    <div class="pt-3">
+                                                        <span class="technologies-title">
+                                                            Technologies
+                                                        </span>
                                                         <span class="tag">Laravel</span>
                                                         <span class="tag">Vuejs</span>
-                                                    </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <!-- Project image -->

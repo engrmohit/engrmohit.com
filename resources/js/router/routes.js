@@ -23,5 +23,10 @@ export default [
     name: 'portfolio',
     path: '/portfolio',
     component: () => import('../views/Projects.vue')
+  },
+  {
+    name: 'portfolio.show',
+    path: '/portfolio/show',
+    component: () => import('../views/ProjectDetails.vue')
   }
 ]
