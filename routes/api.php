@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\API\ProjectsController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,4 +18,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::name('api.')->group(function() {
+    // Route::apiResource('projects', ProjectsController::class);
+
+    Route::get('/projects', [ProjectsController::class, 'index'])->name('projects.index');
+    Route::get('/projects/{project:slug}', [ProjectsController::class, 'show'])->name('projects.show');
 });
