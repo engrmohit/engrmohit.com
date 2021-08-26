@@ -26,7 +26,7 @@ export default [
   },
   {
     name: 'portfolio.show',
-    path: '/portfolio/show',
+    path: '/portfolio/:slug',
     component: () => import('../views/ProjectDetails.vue')
   }
 ]

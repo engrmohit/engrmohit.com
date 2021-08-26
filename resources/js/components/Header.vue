@@ -12,7 +12,7 @@
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <router-link to="/" class="nav-link link-scroll">Home</router-link>
+                            <router-link to="/" exact class="nav-link link-scroll">Home</router-link>
                         </li>
                         <li class="nav-item">
                             <router-link to="/portfolio" class="nav-link link-scroll">Portfolio</router-link>

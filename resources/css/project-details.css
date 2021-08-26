@@ -1,12 +1,17 @@
-section {
-    padding: 3rem 0 5rem 0;
-}
-
 .technologies-title {
     display: block;
     text-transform: uppercase;
     margin-bottom: 0.25rem;
     font-size: 0.85rem;
+}
+
+.description a {
+    color: #0d0d0d;
+    text-decoration: underline;
+}
+
+.description a:hover {
+    text-decoration: none;
 }
 
 .project-image {
@@ -15,10 +20,11 @@ section {
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.btn-view-online {
-    text-decoration: none;
+.btn-project-link {
+    text-decoration: none !important;
+    margin: 0.2rem 0.125rem;
 }
 
-.btn-view-online:focus {
+.btn-project-link:focus {
     box-shadow: none !important;
 }

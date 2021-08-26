@@ -41,6 +41,10 @@ body {
 }
 
 section {
+  padding: 3rem 0 5rem 0;
+}
+
+section.section-middle {
   padding: 9rem 0;
 }
 
@@ -128,6 +132,7 @@ nav.navbar a.nav-link:focus {
 }
 
 nav.navbar a.nav-link.active, 
+nav.navbar a.nav-link.router-link-active, 
 nav.navbar a.nav-link.router-link-exact-active, 
 nav.navbar a.nav-link:hover {
   color: #000;
@@ -398,6 +403,7 @@ UTILITY CLASSES
   vertical-align: baseline;
   background-color: #6c757d;
   text-transform: uppercase;
+  margin: 0.2rem 0.125rem;
 }
 
 .tag:focus, .tag:hover, .tag:focus-visible {

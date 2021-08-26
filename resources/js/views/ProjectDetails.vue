@@ -3,37 +3,52 @@
         <site-header></site-header>
         <section>
             <div class="container">
-                <h1 class="Heading">Callsheet</h1>
+                <div v-if="project">
+                    <div class="row">
+                        <div class="col-md-8">
 
-                <div class="row mt-4">
-                    <div class="col-md-8">
-                        <div class="description">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odio ut distinctio modi. Eius dolorum unde sapiente ullam voluptate debitis id similique molestias? Cumque eveniet explicabo dolore quibusdam ratione fugit!</p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi voluptatum eligendi rerum dignissimos perspiciatis, repellendus libero distinctio aut asperiores enim placeat, nobis incidunt, minima ad officiis quia voluptates molestias odio.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fuga repellendus tempora at facere sit accusamus, voluptas, atque, magnam quae voluptatem. Obcaecati eius consequatur quidem dolores dolor quam laudantium corrupti.</p>
+                            <!-- title -->
+                            <h1 class="Heading">{{ project.title }}</h1>
+
+                            <!-- description -->
+                            <div class="description mt-4" v-html="project.description"></div>
+
+                            <!-- links -->
+                            <div class="pt-3" v-if="project.links && project.links.length > 0">
+                                <a 
+                                    v-for="link in project.links" 
+                                    :key="link.id" 
+                                    :href="link.link" 
+                                    class="btn btn-primary btn-project-link" 
+                                    target="_blank"
+                                >
+                                    <i class="fa fa-external-link-alt me-1"></i>
+                                    {{ link.title }}
+                                </a>
+                            </div>
+
+                            <!-- technologies -->
+                            <div class="my-4">
+                                <span class="technologies-title">
+                                    Technologies
+                                </span>
+                                
+                                <span class="tag" v-for="tech in project.technologies" :key="tech.id">
+                                    {{ tech.name }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- images -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img class="project-image" v-for="image in project.images" :key="image.id" :src="image.path">
                         </div>
                     </div>
                 </div>
-
-                <div class="pt-3">
-                    <a href="https://callsheet.dk" class="btn btn-primary btn-view-online" target="_blank">
-                        <i class="fa fa-external-link-alt me-1"></i>
-                        View Online
-                    </a>
-                </div>
-
-                <div class="my-4">
-                    <span class="technologies-title">
-                        Technologies
-                    </span>
-                    <span class="tag">Laravel</span>
-                    <span class="tag">Vuejs</span>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <img src="/images/callsheet.dk.png" class="project-image">
-                    </div>
+                <div v-else>
+                    Loading...
                 </div>
             </div>
         </section>
@@ -45,7 +60,22 @@ import SiteHeader from '../components/Header.vue'
 
 export default {
     name: 'about',
-    components: { SiteHeader }
+    components: { SiteHeader },
+    data() {
+        return {
+            project: null
+        }
+    },
+    mounted() {
+        axios
+            .get('/api/projects/'+this.$route.params.slug)
+            .then(response => {
+                this.project = response.data.data.project;
+            })
+            .catch(error => {
+                // 
+            });
+    }
 }
 </script>
 
@@ -53,4 +83,4 @@ export default {
     @import "../../css/app.css";
 </style>
 
-<style scoped src="../../css/project-details.css"></style>
+<style src="../../css/project-details.css"></style>

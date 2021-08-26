@@ -1,11 +1,7 @@
-section {
-    padding: 3rem 0 5rem 0;
-}
-
 .project-row .project-timeline .timeline-date {
-    margin-top: 2.45rem;
+    margin-top: 2.95rem;
     margin-right: 1rem;
-    height: 106%;
+    height: 110%;
     text-align: right;
     border-right: 1px solid #6c757d;
     position: relative;
@@ -15,14 +11,18 @@ section {
     margin-top: 0.45rem;
 }
 
+.project-row:last-child .project-timeline .timeline-date {
+    height: 90%;
+}
+
 .project-row .project-timeline .timeline-date .timeline-date-element {
     position: absolute;
     right: -0.62rem;
 }
 
 .project-row .project-content {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
     border-bottom: 1px solid #aaa;
 }
 
@@ -35,13 +35,26 @@ section {
     border-bottom: 0;
 }
 
+.project-description {
+    margin-top: 0.8rem;
+}
+
+.project-description a {
+    color: #0d0d0d;
+    text-decoration: underline;
+}
+
+.project-description a:hover {
+    text-decoration: none;
+}
+
 .project-image {
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-more-details {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .btn-more-details:focus {
