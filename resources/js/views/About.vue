@@ -1,7 +1,7 @@
 <template>
     <div>
         <site-header></site-header>
-        <section class="text">
+        <section class="text section-middle">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
