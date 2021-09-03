@@ -6,10 +6,12 @@
                     <!-- <img src="/images/logo.png" alt="" class="img-fluid"> -->
                     Mohit Sharma
                 </router-link>
-                
-                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-                
-                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+
+                <b-button v-b-toggle.navbarSupportedContent variant="light" class="navbar-toggler navbar-toggler-right">
+                    <i class="fa fa-bars"></i>
+                </b-button>
+
+                <b-collapse id="navbarSupportedContent" class="navbar-collapse">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <router-link to="/" exact class="nav-link link-scroll">Home</router-link>
@@ -24,7 +26,7 @@
                             <router-link to="/contact" class="nav-link link-scroll">Contact</router-link>
                         </li>
                     </ul>
-                </div>
+                </b-collapse>
             </div>
         </nav>
     </header>

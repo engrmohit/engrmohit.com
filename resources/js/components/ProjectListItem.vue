@@ -1,7 +1,7 @@
 <template>
     <div class="row project-row">
-        <!-- Timeline -->
-        <div class="col-md-2 project-timeline" style="width: 14%;">
+        <!-- Timeline (large screen) -->
+        <div class="col-md-2 project-timeline d-lg-block">
             <div class="timeline-date">
                 <div class="timeline-date-element">
                     <span class="me-2 fst-italic">{{ timelineYear }}</span>
@@ -13,16 +13,20 @@
         </div>
 
         <!-- Project -->
-        <div class="col-md-10 project-content" style="width: 85%;">
+        <div class="col-12 col-lg-10 project-content">
             <div class="row">
-
-                <div class="col-md-7 ps-0 pe-1">
+                <div class="col-12 col-lg-7">
                     <!-- title -->
                     <h2>
                         <router-link :to="detailsLink">
                             {{ project.title }}
                         </router-link>
                     </h2>
+
+                    <!-- Timeline (small and medium screen) -->
+                    <div class="mb-4 d-lg-none">
+                        <span class="text-secondary">{{ timelineYear }}</span>
+                    </div>
 
                     <!-- description -->
                     <div class="project-description" v-html="project.short_description"></div>
@@ -47,7 +51,7 @@
                 </div>
 
                 <!-- Project image -->
-                <div class="col-md-5">
+                <div class="col-12 col-lg-5 mt-5">
                     <div class="project-image">
                         <router-link :to="detailsLink" class="has-border">
                             <img :src="project.thumbnail" alt="image" class="img-fluid">

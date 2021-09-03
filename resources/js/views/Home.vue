@@ -4,7 +4,7 @@
         <div class="content">
             <b-container class="clearfix">
                 <b-row>
-                    <b-col class="ms-5">
+                    <b-col md="8" lg="6" xl="5" offset-md="2" offset-lg="0" offset-xl="0">
                         <div class="block-headings">
                             <!-- <h3>Hi, This is</h3> -->
                             <h1>Mohit Sharma</h1>
@@ -13,9 +13,8 @@
 
                         <div class="block-intro">
                             <p>
-                                My stack includes PHP & Laravel, Vue.js, MySQL and all the other various 
-                                <br>
-                                frameworks, libraries and technologies related to them.
+                                My stack includes PHP & Laravel, Vue.js, MySQL and all the other 
+                                various frameworks, libraries and technologies related to them.
                             </p>
                         </div>
 

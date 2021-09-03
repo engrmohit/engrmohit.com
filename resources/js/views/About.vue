@@ -4,7 +4,7 @@
         <section class="text section-middle">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-12 col-md-6">
                         <h2 class="heading">About me</h2>
                         <!-- <p class="lead">This can be an about section.</p> -->
                         <p class="c-text-justify">
@@ -21,8 +21,10 @@
                             </span>.
                         </p>
                     </div>
-                    <div class="col-lg-4 mx-auto">
-                        <img src="/images/mohit-sharma.jpg" alt="" class="img-fluid rounded-circle profile-img">
+                    <div class="col-8 col-md-4 mx-auto">
+                        <div class="container-img">
+                            <img src="/images/mohit-sharma.jpg" alt="" class="img-fluid rounded-circle">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,4 +43,18 @@ export default {
 
 <style>
     @import "../../css/app.css";
+</style>
+
+<style scoped>
+    @media (max-width: 991.98px) {
+        .container-img {
+            padding: 5rem 0;
+        }
+    }
+
+    @media (max-width:767.98px) {
+        .container-img {
+            padding: 3rem 0;
+        }
+    }
 </style>

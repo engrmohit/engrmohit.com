@@ -4,25 +4,21 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col">
                         <h1 class="heading">Portfolio</h1>
                         <p class="mb-5">
                             Here is a portfolio of some of my most recent projects. 
                             <!-- Unless explicitly stated otherwise, all their back-end and front-end parts were completely done by me. -->
                         </p>
 
-                        <div class="row">
-                            <div class="col">
-                                <div v-if="projects">
-                                    <project-list-item 
-                                        v-for="project in projects" 
-                                        :key="project.id"
-                                        :project="project"
-                                    ></project-list-item>
-                                </div>
-                                <div v-else class="text-center">Loading...</div>
-                            </div>
+                        <div v-if="projects">
+                            <project-list-item 
+                                v-for="project in projects" 
+                                :key="project.id"
+                                :project="project"
+                            ></project-list-item>
                         </div>
+                        <div v-else class="text-center">Loading...</div>
                     </div>
                 </div>
             </div>
