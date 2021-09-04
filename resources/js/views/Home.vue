@@ -13,12 +13,13 @@
 
                         <div class="block-intro">
                             <p>
-                                My stack includes PHP & Laravel, Vue.js, MySQL and all the other 
+                                My stack includes PHP &amp; Laravel, Vue.js, MySQL and all the other 
                                 various frameworks, libraries and technologies related to them.
                             </p>
                         </div>
 
                         <div class="block-links">
+                            <router-link to="/portfolio" class="me-2">My work</router-link>
                             <router-link to="/about">More about me</router-link>
                         </div>
 
